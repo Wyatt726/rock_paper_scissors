@@ -9,7 +9,7 @@ class Gameplay:
 
     def start_game(self):
         print ('The game will begin!')
-        choices = ["rock", "paper", "scissors"]
+        choices = ["rock", "paper", "scissors", "lizard", "spock"]
         print(choices)
         
         if Player() == Player()#will () this assocate picked players?
