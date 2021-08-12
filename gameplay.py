@@ -1,19 +1,38 @@
 #Battlefield
+from player import Player
+
+
 class Gameplay:
     def __init__(self):
         self.player_one = ()
         self.player_two = ()
 
     def start_game(self):
-        # print("The game will begin!")
-        # choices = ["rock", "paper", "scissors", "lizard", "Spock"]
-        # computer = random.choice(choices)
-#Welcome message
-print("Welcome to RPSLS!")
+        print ('The game will begin!')
+        choices = ["rock", "paper", "scissors", "lizard", "Spock"]
+        print(choices)
+        
+        #if Player() == Player()#will () this assocate picked players?
+
+
 #Display rules, what beats what?
-print("Here are the rules of the game: Each player will have an oppotunity to choose a method.")
-print("Player one will choose a method and then Player two will have a turn.")
-print("Each player will repeat the steps 2 more times, unless there are any ties.")
+            # print("Here are the rules of the game: Each player will have an oppotunity to choose a method. /n
+            # "Player one will choose a method and then Player two will have a turn. Each player will repeat /n
+            # "the steps 2 more times, unless there are any ties. In which case each player will get another go /n
+            # "until both players choose something different.")
+            # print("What wins?/n"
+            #  "Rock crushes Scissors /n"
+            #  "Scissors cuts Paper/n"
+            #  "Paper covers Rock/n"
+            #  "Rock crushes Lizard/n"
+            #  "Lizared poisons Spock/n"
+            #  "Spock smashes Scissors/n"
+            #  "Scissors decapitates Lizard/n"
+            #  "Lizard eats Paper /n"
+            #  "Paper disaproves Spock/n"
+            #  "Spock vaporizes Rock/n")
+
+
 #Determine game type - single or multi-player
 #Create players basone on game type
 

@@ -1,3 +1,5 @@
+import random
+
 class AIplayer:
     def __init__(self):
-        pass
+        AIplayer = random.choice(choices)
