@@ -9,7 +9,7 @@ class Gameplay:
 
     def start_game(self):
         print ('The game will begin!')
-        choices = ["rock", "paper", "scissors", "lizard", "Spock"]
+        choices = ["rock", "paper", "scissors", "lizard", "spock"]
         print(choices)
         
         #if Player() == Player()#will () this assocate picked players?
@@ -18,8 +18,8 @@ class Gameplay:
 #Display rules, what beats what?
             # print("Here are the rules of the game: Each player will have an oppotunity to choose a method. /n
             # "Player one will choose a method and then Player two will have a turn. Each player will repeat /n
-            # "the steps 2 more times, unless there are any ties. In which case each player will get another go /n
-            # "until both players choose something different.")
+            # "the steps 2 more times, unless there are any ties. In which case each player will get another /n
+            # "go until both players choose something different.")
             # print("What wins?/n"
             #  "Rock crushes Scissors /n"
             #  "Scissors cuts Paper/n"
@@ -51,4 +51,5 @@ class Gameplay:
 #Prompt if they want to play again
 
     def determine_game_type(self):
+        pass
 #set self.player_two to Human or AI
