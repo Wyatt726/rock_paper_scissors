@@ -1,5 +1,7 @@
 #Battlefield
-import random
+from player import Player
+
+
 class Gameplay:
     def __init__(self):
         self.player_one = ()
@@ -8,8 +10,10 @@ class Gameplay:
     def start_game(self):
         print ('The game will begin!')
         choices = ["rock", "paper", "scissors"]
-        computer = random.choice(choices)
         print(choices)
+        
+        if Player() == Player()#will () this assocate picked players?
+
 
 #Display rules, what beats what?
 #Determine game type - single or multi-player
