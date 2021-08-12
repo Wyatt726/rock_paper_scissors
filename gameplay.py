@@ -1,11 +1,16 @@
 #Battlefield
+import random
 class Gameplay:
     def __init__(self):
         self.player_one = ()
         self.player_two = ()
 
     def start_game(self):
-#Welcome message
+        print ('The game will begin!')
+        choices = ["rock", "paper", "scissors"]
+        computer = random.choice(choices)
+        print(choices)
+
 #Display rules, what beats what?
 #Determine game type - single or multi-player
 #Create players basone on game type
