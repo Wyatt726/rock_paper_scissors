@@ -5,8 +5,15 @@ class Gameplay:
         self.player_two = ()
 
     def start_game(self):
+        # print("The game will begin!")
+        # choices = ["rock", "paper", "scissors", "lizard", "Spock"]
+        # computer = random.choice(choices)
 #Welcome message
+print("Welcome to RPSLS!")
 #Display rules, what beats what?
+print("Here are the rules of the game: Each player will have an oppotunity to choose a method.")
+print("Player one will choose a method and then Player two will have a turn.")
+print("Each player will repeat the steps 2 more times, unless there are any ties.")
 #Determine game type - single or multi-player
 #Create players basone on game type
 
