@@ -1,4 +1,4 @@
-from random import randint
+from random import random
 
 class AIplayer:
     def __init__(self):
