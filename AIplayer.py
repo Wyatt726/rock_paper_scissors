@@ -2,7 +2,11 @@ from random import randint
 
 class AIplayer:
     def __init__(self):
-        AIplayer = random.choice(choices)
+        pass
+        
+    def choose_option(self):
+        #randome
+        pass
         
 
       

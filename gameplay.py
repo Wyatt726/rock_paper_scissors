@@ -1,10 +1,11 @@
 #Battlefield
+from humanplayer import humanplayer
 from player import Player
 
 class Gameplay:
     def __init__(self):
-        self.player_one = ()
-        self.player_two = ()
+        self.player_one = HumanPlayer()
+        self.player_two = ''
 
     def start_game(self):
         print ('The game will begin!')
@@ -40,8 +41,14 @@ class Gameplay:
         self.game_mode = input("How would you like to play? Enter 1 for single player or 2 for multiplayer below.")
         if "user_input" == 1: 
             print("You vs. Computer")
+            self.player_two = AiPlayer()
         if "user_input" == 2:
             print("You vs. Player Two")
+            self.player_two = Humanplayer()
+        
+        # enter names
+        self.player_one.assign_name("1")
+        self.player_two.assign_name("2")
         #set self.player_two to Human or AI
         
 #Create players based on game type
