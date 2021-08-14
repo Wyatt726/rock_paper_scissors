@@ -1,10 +1,12 @@
-#Battlefield
-from humanplayer import humanplayer
+#Gamefield
+from humanplayer import Humanplayer
 from player import Player
+from AIplayer import AIplayer
+from collections import Counter
 
 class Gameplay:
     def __init__(self):
-        self.player_one = HumanPlayer()
+        self.player_one = Humanplayer()
         self.player_two = ''
 
     def start_game(self):
@@ -20,7 +22,7 @@ class Gameplay:
             "1. Player one selects a gesture./n"
             "2. Player two selects a gesture./n"
             "3. As long as there is not a tie, repeat sequence two more times./n"
-            " Best of three wins.")
+            "Winner receives 1 point per turn - Best of three wins.")
 
     def criteria(self):
             print("What wins?/n"
@@ -32,7 +34,7 @@ class Gameplay:
              "Spock smashes Scissors/n"
              "Scissors decapitates Lizard/n"
              "Lizard eats Paper /n"
-             "Paper disapproves Spock/n"
+             "Paper disproves Spock/n"
              "Spock vaporizes Rock/n")
 
 #Determine game type - single or multi-player
@@ -41,7 +43,7 @@ class Gameplay:
         self.game_mode = input("How would you like to play? Enter 1 for single player or 2 for multiplayer below.")
         if "user_input" == 1: 
             print("You vs. Computer")
-            self.player_two = AiPlayer()
+            self.player_two = AIplayer()
         if "user_input" == 2:
             print("You vs. Player Two")
             self.player_two = Humanplayer()
@@ -55,9 +57,6 @@ class Gameplay:
 
 #Game rounds - Repeat until one player has 2 points - while loop?
     def gesture_battle(self):
-        pass
-#-Prompt user to enter gesture
-    def player_one_turn(self):
         self.player_one_turn = input("Enter the appropriate number for your choice: /n"
              "1 - Rock /n"
              "2 - Scissors /n"
@@ -78,21 +77,36 @@ class Gameplay:
         print("Player Two " + input)
 #Compare gestures
     def compare_gestures(self):
-        pass
+        if ("Rock" and "Scissors" or "Rock" and "Lizard"):
+                print("Rock Wins!")
+        if ("Scissors" and "Paper" or "Scissors" and "Lizard"):
+                print("Scissors Wins!")
+        if ("Paper" and "Rock" or "Paper" and "Spock"):
+                 print("Paper Wins!")
+        if ("Lizard" and "Spock" or "Lizard" and "Paper"):
+                 print("Lizard Wins!")
+        if ("Spock" and "Scissors" or "Spock" and "Rock"):
+                 print("Spock Wins!")
 #--Winner gets a point
     def count_points(self):
-        pass 
+        print(Counter(["Player One: ", "Player Two: "]))
+        print("No points are awarded for a tie.") 
 # -- No points if tie round
 #Display winner of round
     def round_winner(self):
-        pass
+        player_one_points = 0
+        if player_one_points >=1:
+            print("Player one, you are the winner of this round.")
+        else:
+            print("Player Two")
+
 #end game
 #display winner of game
     def display_winner(self):
-        if "Player One" == 3:
-            print("Player One, you are the winner!")
+        if ("Player One" == 2):
+            print("Player Oe, you are the winner of this game!")
         else:
-            print("Congratulations Player Two!")
+            print("Congratulations Player Two! You are the winner!")
 
 #Prompt if they want to play again
     def play_again(self):
