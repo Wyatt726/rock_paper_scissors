@@ -37,18 +37,22 @@ class Gameplay:
              "Paper disproves Spock/n"
              "Spock vaporizes Rock/n")
 
-#Determine game type - single or multi-player
+#Determine game type - single or multi-player / gain user input
+#resouce: https://codeabcs.com/python/validation.php
     def determine_game_mode(self):
-        #gain user input
-        self.game_mode = input("How would you like to play? Enter 1 for single player or 2 for multiplayer below.")
-        if "user_input" == 1: 
-            print("You vs. Computer")
-            self.player_two = AIplayer()
-        if "user_input" == 2:
-            print("You vs. Player Two")
-            self.player_two = Humanplayer()
-        
-        # enter names
+        self.game_mode = input("How would you like to play?")
+        while True:
+            try:
+                0 = int(input("Please enter 1 for single player or 2 for multiplayer."))
+                if 0 >= 3:
+                    raise ValueError("This is not a correct option. Please re-enter.")
+            except ValueError as error:
+                print("That is not a valid option. Please enter 1 or 2.")
+            else:
+                print("Thank you.")
+                break                               
+  
+# enter names
         self.player_one.assign_name("1")
         self.player_two.assign_name("2")
         #set self.player_two to Human or AI
@@ -57,59 +61,72 @@ class Gameplay:
 
 #Game rounds - Repeat until one player has 2 points - while loop?
     def gesture_battle(self):
-        self.player_one_turn = input("Enter the appropriate number for your choice: /n"
+        self.p1 = input("Enter the appropriate number for your choice: /n"
              "1 - Rock /n"
              "2 - Scissors /n"
              "3 - Paper /n"
              "4 - Lizard /n"
              "5 - Spock/n")
+        print("Player One: " + input)
+
 #if Player() == Player()#will () this assocate picked players?
+
 #-Save choice somewhere
-        print("Player One " + input)
+
 #Player Two chooses a gesture
-    def player_two_turn(self):
-        self.player_two_turn = input("Enter the appropriate number for your choice: /n"
+    def p2(self):
+        self.p2 = input("Enter the appropriate number for your choice: /n"
              "1 - Rock /n"
              "2 - Scissors /n"
              "3 - Paper /n"
              "4 - Lizard /n"
              "5 - Spock/n")
-        print("Player Two " + input)
+        print("Player Two: " + input)
+
 #Compare gestures
+    player_one = "p1"
+    player_two = "p2"
+
     def compare_gestures(self):
-        if ("Rock" and "Scissors" or "Rock" and "Lizard"):
-                print("Rock Wins!")
-        if ("Scissors" and "Paper" or "Scissors" and "Lizard"):
-                print("Scissors Wins!")
-        if ("Paper" and "Rock" or "Paper" and "Spock"):
-                 print("Paper Wins!")
-        if ("Lizard" and "Spock" or "Lizard" and "Paper"):
-                 print("Lizard Wins!")
-        if ("Spock" and "Scissors" or "Spock" and "Rock"):
-                 print("Spock Wins!")
-#--Winner gets a point
+        if ("p1" == 1 < 2 or "p2" == 1 < 4):
+            print("Rock Wins!")
+        if ("p1" == 2 < 3 or "p2" == 2 < 4):
+            print("Scissors Wins!")
+        if ("p1" == 3 > 1 or "p2" == 3 < 5):
+            print("Paper Wins!")
+        if ("p1" == 4 < 5 or "p2" == 5 > 3):
+            print("Lizard Wins!")
+        if ("p1" == 5 > 2 or "p2" == 5 > 1):
+            print("Spock Wins!")
+        if ("p1" == "p2"):
+            print("Tie")
+      
+#--Winner gets a point               Not sure how to do this??????????
     def count_points(self):
         print(Counter(["Player One: ", "Player Two: "]))
-        print("No points are awarded for a tie.") 
-# -- No points if tie round
+
 #Display winner of round
     def round_winner(self):
         player_one_points = 0
-        if player_one_points >=1:
-            print("Player one, you are the winner of this round.")
+        if player_one_points >= 1:
+            print("Player one, you are the winner of this round!")
         else:
-            print("Player Two")
+            print("Player Two, you are the winner of this round!")
 
 #end game
 #display winner of game
     def display_winner(self):
         if ("Player One" == 2):
-            print("Player Oe, you are the winner of this game!")
+            print("Player One, you are the winner of this game!")
         else:
             print("Congratulations Player Two! You are the winner!")
 
 #Prompt if they want to play again
     def play_again(self):
         self.players = input("Would you like to play again? Enter 'yes' or 'no' below.")
-
-        
+        if input == "yes":
+            pass    #how to start game over????
+        elif input == "no":
+            print("Thank you for playing!")
+        else:
+            print ("Please enter yes or no.")         

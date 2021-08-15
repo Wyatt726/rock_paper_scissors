@@ -5,5 +5,5 @@ class humanplayer(Player):
         pass
         
     def choose_option(self):
-        #promppt
+        #prompt
         pass

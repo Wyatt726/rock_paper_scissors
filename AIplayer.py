@@ -5,7 +5,7 @@ class AIplayer:
         pass
         
     def choose_option(self):
-        #randome
+        #random
         pass
         
 
