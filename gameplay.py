@@ -18,8 +18,9 @@ class Gameplay:
     def run_game(self):
         self.game_details()
         self.determine_game_mode()
-
-
+        self.game_rounds()
+        self.compare_choices()
+        
     def game_details(self):
         self.welcome = print("Welcome to the Rock, Paper, Scissors...Lizard and Spock game!")
 
