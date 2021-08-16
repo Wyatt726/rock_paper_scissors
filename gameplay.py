@@ -1,13 +1,14 @@
 #Gamefield
-from humanplayer import Humanplayer
+from player_one import Player_one
+from player_two import Player_two
 from player import Player
 from AIplayer import AIplayer
 from collections import Counter
 
 class Gameplay:
     def __init__(self):
-        self.player_one = Humanplayer()
-        self.player_two = Player()
+        self.player_one = Player_one
+        self.player_two = Player_two
         self.player_ai = AIplayer
 
     def start_game(self):
