@@ -7,8 +7,7 @@ from collections import Counter
 class Gameplay:
     def __init__(self):
         self.player_one = Humanplayer()
-        self.player_two = Player()
-        self.player_ai = AIplayer
+        self.player_two = ''
 
     def start_game(self):
         print ('The game will begin!')
@@ -102,7 +101,7 @@ class Gameplay:
         if ("p1" == "p2"):
             print("Tie")
       
-#--Winner gets a point               Not sure how to do this??????????
+#--Winner gets a point
     def count_points(self):
         print(Counter(["Player One: ", "Player Two: "]))
 
@@ -126,8 +125,7 @@ class Gameplay:
     def play_again(self):
         self.players = input("Would you like to play again? Enter 'yes' or 'no' below.")
         if input == "yes":
-            pass                 #how to start game over????
+            pass    #how to start game over????
         elif input == "no":
             print("Thank you for playing!")
-        else:
-            print ("")         
+            print ("Please enter yes or no.")         
