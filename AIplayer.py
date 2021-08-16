@@ -1,4 +1,5 @@
 from random import Random
+from player import Player
 
 class AIplayer(Player):
     def __init__(self):
@@ -6,7 +7,7 @@ class AIplayer(Player):
         super().__init__()
 
     def choose_option(self):
-        AIplayer = random.choice(choices)
+        self.choice = Random.choice(self.gesture_list)
         print(AIplayer)
         
 

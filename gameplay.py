@@ -1,17 +1,25 @@
 #Gamefield
-from humanplayer import Humanplayer #debugger picks up errors here
 from player import Player
+from human import Human
+
+#from player import Player
 from AIplayer import AIplayer
 
 #-------------------constructor-----------------
 class Gameplay:
     def __init__(self):
-        self.player_one = Player
-        self.player_two = Humanplayer
-        self.player_ai = AIplayer
+        #self.player = Player
+        self.player_one = None
+        self.player_two = None
+      
         
 
 #---------------method signatures---------------
+    def run_game(self):
+        self.game_details()
+        self.determine_game_mode()
+
+
     def game_details(self):
         self.welcome = print("Welcome to the Rock, Paper, Scissors...Lizard and Spock game!")
 
@@ -35,35 +43,36 @@ class Gameplay:
     
     def determine_game_mode(self):
         self.game_mode = input("Would you like to play single player to multiplayer? Enter 1 for single or 2 to play a friend.")
+
+        if(self.game_mode == "1"):
+            self.player_one = Human()
+            self.player_two = AIplayer()
+        elif(self.game_mode == "2"):
+            self.player_one = Human()
+            self.player_two = Human()
+        elif(self.game_mode == "3"):
+            self.player_one = AIplayer()
+            self.player_two = AIplayer()
+        
+       
        # self.player_one.assign_name("1")
        # self.player_two.assign_name("2")      
          
     def game_rounds(self):
-        self.plyaer_one = input("Enter the appropriate number for your choice: /n"
-             "1 - Rock /n"
-             "2 - Scissors /n"
-             "3 - Paper /n"
-             "4 - Lizard /n"
-             "5 - Spock/n")
-        print("Player One: " + input)
-
-        self.player_two = input("Enter the appropriate number for your choice: /n"
-             "1 - Rock /n"
-             "2 - Scissors /n"
-             "3 - Paper /n"
-             "4 - Lizard /n"
-             "5 - Spock/n")
-        print("Player Two: " + input)
-
-        self.player_ai = ()
-        print("Computer: " + input)
+        while something:
+            self.player_one.choose_option()
+            self.player_two.choose_option()
+            self.compare_choices()
 
     def compare_choices(self):
-        choice = ""
-        choice2 = ""
-        if choice == "rock" and choice2 == "rock":
+        
+        if self.player_one.choice == "rock" and self.player_two.choice == "rock":
            print("It's a tie!") 
-        if choice == "rock" and choice2 == "scissors":
+        if self.player_one.choice == "rock" and self.player_two.choice == "scissors":
             print("Rock crushes scissors, Player_one wins!")
+            self.player_one.score += 1
         if choice == ""
         pass
+
+
+    #player score less than 2 keep looping -- while loop
