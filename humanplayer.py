@@ -1,9 +1,10 @@
 from player import Player
 
-class humanplayer(Player):
+class Humanplayer(Player):
     def __init__(self):
-        pass
-        
+        self.player_name = ''
+
+  
     def choose_option(self):
-        #promppt
+        #prompt
         pass
