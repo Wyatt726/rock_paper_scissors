@@ -15,4 +15,10 @@ class Human(Player):
             self.choice = "Rock"
         elif(user_input =="2"):
             self.choice = "Scissors"
+        elif(user_input == "3"):
+            self.choice = "Paper"
+        elif(user_input == "4"):
+            self.choice = "Lizard"
+        elif(user_input == "5"):
+            self.choice = "Spock"
         #ADD IN IF STATEMENT 

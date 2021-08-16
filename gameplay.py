@@ -18,7 +18,8 @@ class Gameplay:
     def run_game(self):
         self.game_details()
         self.determine_game_mode()
-
+        self.game_rounds()
+        self.compare_choices()
 
     def game_details(self):
         self.welcome = print("Welcome to the Rock, Paper, Scissors...Lizard and Spock game!")
@@ -50,14 +51,7 @@ class Gameplay:
         elif(self.game_mode == "2"):
             self.player_one = Human()
             self.player_two = Human()
-        elif(self.game_mode == "3"):
-            self.player_one = AIplayer()
-            self.player_two = AIplayer()
-        
-       
-       # self.player_one.assign_name("1")
-       # self.player_two.assign_name("2")      
-         
+                 
     def game_rounds(self):
         while something:
             self.player_one.choose_option()
@@ -66,13 +60,50 @@ class Gameplay:
 
     def compare_choices(self):
         
-        if self.player_one.choice == "rock" and self.player_two.choice == "rock":
-           print("It's a tie!") 
         if self.player_one.choice == "rock" and self.player_two.choice == "scissors":
             print("Rock crushes scissors, Player_one wins!")
             self.player_one.score += 1
-        if choice == ""
-        pass
+        if self.player_one.choice == "scissors" and self.player_two.choice == "paper":
+            print("Scissors cuts paper! Player_one wins!")
+            self.player_one.score += 1
+        if self.player_one.choice == "paper" and self.player_two.choice == "rock":
+            print("Paper covers rock! Player_one wins!")
+            self.player_one.score += 1
+        if self.player_one.choice == "lizard" and self.player_two.choice == "Spock":
+            print("lizard poisons Spock! Player_one wins!")
+            self.player_one.score += 1
+        if self.player_one.choice == "Spock" and self.player_two.choice == "scissors":
+            print("Spock smashes scissors! Player_one wins!")
+            self.player_one.score += 1
+        if self.player_two.choice == "rock" and self.player_one.choice == "lizard":
+            print("rock crushes lizard! Player_two wins!")
+            self.player_two.score += 1
+        if self.player_two.choice == "scissors" and self.player_one.choice == "lizard":
+            print("Scissors decapitates lizard! Player_two wins!")
+            self.player_two.score += 1
+        if self.player_two.choice == "paper" and self.player_one.choice == "Spock":
+            print("paper disproves Spock! Player_two wins!")
+            self.player_two.score += 1
+        if self.player_two.choice == "lizard" and self.player_one.choice == "paper":
+            print("Lizard eats paper! Player_two wins!")
+            self.player_two.score +=1
+        if self.player_two.choice == "Spock" and self.player_one.choice == "scissors":
+            print("Spock smashes scissors! Player_two wins!")
+            self.player_two.score +=1
+        if self.player_one.choice == "rock" and self.player_two.choice == "rock":
+           print("It's a tie!") 
+        if self.player_one.choice == "paper" and self.player_two.choice == "paper":
+           print("It's a tie!")
+        if self.player_one.choice == "scissors" and self.player_two.choice == "scissors":
+           print("It's a tie!")
+        if self.player_one.choice == "lizard" and self.player_two.choice == "lizard":
+           print("It's a tie!")
+        if self.player_one.choice == "Spock" and self.player_two.choice == "Spock":
+           print("It's a tie!")    
+
+
+
+
 
 
     #player score less than 2 keep looping -- while loop
