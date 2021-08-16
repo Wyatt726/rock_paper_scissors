@@ -1,13 +1,13 @@
-from random import randint
-from player import Player #???
+from random import Random
 
 class AIplayer(Player):
     def __init__(self):
         self.player_name = 'Arti'
+        super().__init__()
 
     def choose_option(self):
-        #random
-        pass
+        AIplayer = random.choice(choices)
+        print(AIplayer)
         
 
       

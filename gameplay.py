@@ -2,9 +2,8 @@
 from humanplayer import Humanplayer #debugger picks up errors here
 from player import Player
 from AIplayer import AIplayer
-from collections import Counter
 
-#----------constructor-----------------
+#-------------------constructor-----------------
 class Gameplay:
     def __init__(self):
         self.player_one = Player
@@ -66,9 +65,5 @@ class Gameplay:
            print("It's a tie!") 
         if choice == "rock" and choice2 == "scissors":
             print("Rock crushes scissors, Player_one wins!")
-
-
-
-
-
-
+        if choice == ""
+        pass
