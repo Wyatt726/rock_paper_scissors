@@ -59,13 +59,16 @@ class Gameplay:
        # self.player_two.assign_name("2")      
          
     def game_rounds(self):
-        while something:
+        while self.player_one.score < 2 and self.player_two.score < 2:
             self.player_one.choose_option()
             self.player_two.choose_option()
             self.compare_choices()
-
+        if self.player_one.score > 2:
+            print ("player one wins!")
+        elif self.player_two.score > 2:
+                print("player two wins!")
+    
     def compare_choices(self):
-        
         if self.player_one.choice == "rock" and self.player_two.choice == "rock":
            print("It's a tie!") 
         if self.player_one.choice == "rock" and self.player_two.choice == "scissors":
